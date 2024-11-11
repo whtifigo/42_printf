@@ -10,10 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
 #include "ft_printf.h"
 
-int	ft_printf_str(char *s)
+int	print_str(char *s)
 {
 	int	i;
 

@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf_nbr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: matda-co <matda-co@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/09 12:30:24 by matda-co          #+#    #+#             */
-/*   Updated: 2024/11/09 12:30:28 by matda-co         ###   ########.fr       */
+/*   Created: 2024/11/11 15:19:41 by matda-co          #+#    #+#             */
+/*   Updated: 2024/11/11 15:31:37 by matda-co         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-#define FT_PRINTF_H
+#include "ft_printf.h"
 
-#include <stdarg.h>
-#include "libft/libft.h"
+int	print_nbr(int nbr)
+{
+	char	*s;
+	int	tmp;
 
-int	print_str(char *s);
-int	print_hex(unsigned int nbr, int uplow);
+	s = ft_itoa(nbr);
+	tmp = print_str(s);
+	free (s);
+	return (tmp);
 
-#endif
+}
