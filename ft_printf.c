@@ -35,14 +35,13 @@ int	arg_type(va_list args, char type)
 
 int	ft_printf(const char *str, ...)
 {
-	int	i;
-	int len;
+	int		i;
+	int		len;
 	va_list	args;
 
-	i =
+	i = -1;
 	len = 0;
 	va_start (args, str);
-	
 	while (str[i])
 	{
 		if (str[i] != '%')
