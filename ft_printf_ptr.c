@@ -1,24 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_nbr.c                                    :+:      :+:    :+:   */
+/*   ft_printf_ptr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: matda-co <matda-co@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 15:19:41 by matda-co          #+#    #+#             */
-/*   Updated: 2024/11/11 15:31:37 by matda-co         ###   ########.fr       */
+/*   Created: 2024/11/14 09:20:40 by matda-co          #+#    #+#             */
+/*   Updated: 2024/11/14 10:37:00 by matda-co         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_nbr(int nbr)
+static int	print_address(unsigned long a)
 {
-	char	*s;
-	int		tmp;
+	int	n;
+	int	len;
 
-	s = ft_itoa(nbr);
-	tmp = print_str(s);
-	free (s);
-	return (tmp);
+	n = a;
+	if (n < 16)
+		len += write(1, &"0123456789abcdef"[n], 1);
+	else if (n >= 16)
+	{
+		len += print_address(n / 16);
+		len += print_address(n % 16);
+	}
+	return (len);
+}
+
+int	print_ptr(void *pointer)
+{
+	int	len;
+
+	len = 0;
+	if (!pointer)
+		return (print_str("(nil)"));
+	else
+		len += print_str("0x");
+	len += print_address((unsigned long)pointer);
+	return (len);
 }

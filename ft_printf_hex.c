@@ -15,11 +15,10 @@
 int	print_hex(unsigned int nbr, int uplow)
 {
 	unsigned int	n;
-	int	len;
+	int				len;
 
 	n = nbr;
-	len  = 0;
-
+	len = 0;
 	if (n < 16)
 	{
 		if (uplow == 0)

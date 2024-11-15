@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf_unbr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: matda-co <matda-co@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/09 12:30:24 by matda-co          #+#    #+#             */
-/*   Updated: 2024/11/09 12:30:28 by matda-co         ###   ########.fr       */
+/*   Created: 2024/11/14 15:37:36 by matda-co          #+#    #+#             */
+/*   Updated: 2024/11/14 15:37:38 by matda-co         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include "libft/libft.h"
+int	print_unbr(unsigned int nbr)
+{
+	int	n;
+	int	len;
 
-int	arg_type(va_list args, char type);
-int	print_str(char *s);
-int	print_ptr(void *pointer);
-int	print_nbr(int nbr);
-int	print_hex(unsigned int nbr, int uplow);
-int print_unbr(unsigned int nbr);
+	n = nbr;
+	len = 0;
+	
+	if (n == 0)
+		return (1);
+	if (n >= 10)
+	{
+		len += print_unbr(n / 10);
+		n = n % 10;
+	}
+	if (n < 10)
+	{
+		ft_putchar_fd(n + '0', 1);
+		len++;
+	}
+	return (len);
 
-#endif
+}
