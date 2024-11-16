@@ -18,6 +18,7 @@ static int	print_address(unsigned long a)
 	int	len;
 
 	n = a;
+	len = 0;
 	if (n < 16)
 		len += write(1, &"0123456789abcdef"[n], 1);
 	else if (n >= 16)

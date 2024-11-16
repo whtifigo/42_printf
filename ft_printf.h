@@ -22,5 +22,6 @@ int	print_ptr(void *pointer);
 int	print_nbr(int nbr);
 int	print_hex(unsigned int nbr, int uplow);
 int	print_unbr(unsigned int nbr);
+int	ft_printf(const char *str, ...);
 
 #endif
