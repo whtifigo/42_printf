@@ -12,12 +12,12 @@
 
 #include "ft_printf.h"
 
-static int	print_address(unsigned long a)
+static int	print_address(unsigned long long nbr)
 {
-	int	n;
-	int	len;
+	unsigned long long	n;
+	unsigned long long	len;
 
-	n = a;
+	n = nbr;
 	len = 0;
 	if (n < 16)
 		len += write(1, &"0123456789abcdef"[n], 1);
@@ -29,15 +29,15 @@ static int	print_address(unsigned long a)
 	return (len);
 }
 
-int	print_ptr(void * pointer)
+int	print_ptr(unsigned long long pointer)
 {
-	int	len;
+	unsigned long long	len;
 
 	len = 0;
 	if (!pointer)
 		return (print_str("(nil)"));
 	else
 		len += print_str("0x");
-	len += print_address((unsigned long)pointer);
+	len += print_address(pointer);
 	return (len);
 }

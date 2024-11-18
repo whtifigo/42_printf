@@ -20,7 +20,7 @@ int	arg_type(va_list args, const char type)
 	if (type == 's')
 		return (print_str(va_arg(args, char *)));
 	if (type == 'p')
-		return (print_ptr(va_arg(args, void *)));
+		return (print_ptr(va_arg(args, unsigned long long)));
 	if (type == 'd' || type == 'i')
 		return (print_nbr(va_arg(args, int)));
 	if (type == 'x')
