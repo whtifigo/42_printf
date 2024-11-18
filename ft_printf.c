@@ -30,10 +30,9 @@ int	arg_type(va_list args, const char type)
 	if (type == 'u')
 		return (print_unbr(va_arg(args, unsigned int)));
 	if (type == '%')
-	{
 		ft_putchar_fd('%', 1);
+	if (type == '%' || type == 'c')
 		return (1);
-	}
 	return (0);
 }
 
@@ -43,7 +42,7 @@ int	ft_printf(const char *str, ...)
 	int		len;
 	va_list	args;
 
-	i = -1;
+	i = 0;
 	len = 0;
 	va_start (args, str);
 	while (str[i])
@@ -54,9 +53,23 @@ int	ft_printf(const char *str, ...)
 			len++;
 		}
 		else
-			len += arg_type(args, str[i++]);
+		{
+			i++;
+			len += arg_type(args, str[i]);
+		}
 		i++;
 	}
 	va_end(args);
 	return (len);
 }
+
+/*int	main(void)
+{
+	int	d;
+
+	ft_printf("PAUlo\n");
+	d = ft_printf("[%s %x %d  BURRO]\n", "teste", 940321, 43432);
+	printf("%d\n", d);
+	d = printf("[%s %x %d  BURRO]\n", "teste", 940321, 43432);
+	printf("%d", d);
+}*/

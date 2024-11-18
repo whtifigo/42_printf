@@ -16,7 +16,7 @@ CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 
 SRC = ft_printf.c ft_printf_str.c ft_printf_nbr.c ft_printf_hex.c ft_printf_ptr.c ft_printf_unbr.c \
-	  libft/ft_putchar_fd.c libft/ft_putstr_fd.c libft/ft_itoa.c libft/ft_putnbr_fd.c
+	  libft/ft_putchar_fd.c libft/ft_putstr_fd.c libft/ft_putnbr_fd.c libft/ft_itoa.c
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)

@@ -29,7 +29,7 @@ static int	print_address(unsigned long a)
 	return (len);
 }
 
-int	print_ptr(void *pointer)
+int	print_ptr(void * pointer)
 {
 	int	len;
 
