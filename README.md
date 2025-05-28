@@ -17,12 +17,15 @@
 ---
 
 ### What is it? <a id="what-is-it"></a>
-
+```ft_printf``` is a project part of the 42 School Curriculum, mainly aiming for the replicaiton of the original ```printf``` function with a restricted set of standard library functions, showcasing a deep understanding of variadic functions, memory management, and formatted output in C. It processes format strings and dynamically formats different types of data before displaying it to the standard output.
 
 ---
 
 ### ✨ Features <a id="features"></a>
-
+- ✅ Handles a wide range of format specifiers
+- ✅ Modular and readable C codebase
+- ✅ Efficient memory management with no leaks
+- ✅ Uses variadic functions to manage input arguments
 
 ---
 
