@@ -1,4 +1,3 @@
-[ft_printf github header](https://github.com/user-attachments/assets/0fb5c62d-d009-40f4-a447-117ccb833e44)
 # 📚 Ft_Printf – 42 Project
 
 ## 🗂️ Table of Contents
