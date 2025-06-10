@@ -33,7 +33,7 @@ Clone this repository:
 ```
 git clone https://github.com/whtifigo/42_printf.git
 ```
-Change your current path to the ```42-printf``` folder:
+Change your current path to the ```42_printf``` folder:
 ```
 cd 42-printf
 ```
