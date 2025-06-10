@@ -1,4 +1,4 @@
-# 📚 Ft_Printf – 42 Project
+# 📚 ft_Printf – 42 Project
 
 ## 🗂️ Table of Contents
 
@@ -41,7 +41,7 @@ And compile everything:
 ```
 make
 ```
-The name of the project is after ```make``` is```libftprintf.a```.
+The name of the project after ```make``` is ```libftprintf.a```.
 
 ---
 
