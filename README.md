@@ -47,9 +47,12 @@ The name of the project is after ```make``` is```libftprintf.a```.
 
 ### ⚙️ Usage <a id="usage"></a>
 
-To use this in your code, make sure to include the ```"ft_printf.h"``` in your project and compile it.
+To use this in your code, make sure to include the ```"ft_printf.h"``` in your project:
 ```
 #include "ft_printf.h"
+```
+And compile it:
+```
 cc -Wall -Wextra -Werror main.c libftprintf.a
 ```
 
