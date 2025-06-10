@@ -16,7 +16,7 @@
 ---
 
 ### What is it? <a id="what-is-it"></a>
-```ft_printf``` is a project part of the 42 School Curriculum, mainly aiming for the replicaiton of the original ```printf``` function with a restricted set of standard library functions, showcasing a deep understanding of variadic functions, memory management, and formatted output in C. It processes format strings and dynamically formats different types of data before displaying it to the standard output.
+```ft_printf``` is a project part of the 42 School Curriculum, mainly aiming for the replication of the original ```printf``` function with a restricted set of standard library functions, showcasing a deep understanding of variadic functions, memory management, and formatted output in C. It processes format strings and dynamically formats different types of data before displaying it to the standard output.
 
 ---
 
@@ -31,29 +31,26 @@
 ### 📥 Installation <a id="installation"></a>
 Clone this repository:
 ```
-
+git clone https://github.com/whtifigo/42_printf.git
 ```
-Change your current path to the ```-``` folder:
+Change your current path to the ```42-printf``` folder:
 ```
-
-```
-Access the ```libft``` folder directly:
-```
-
+cd 42-printf
 ```
 And compile everything:
 ```
-
+make
 ```
-Having done this, a ```-``` will be created!
+The name of the project is after ```make``` is```libftprintf.a```.
 
 ---
 
 ### ⚙️ Usage <a id="usage"></a>
 
-To use this in your code, make sure to state the ```-``` in your project and compile it.
+To use this in your code, make sure to include the ```"ft_printf.h"``` in your project and compile it.
 ```
-
+#include "ft_printf.h"
+cc -Wall -Wextra -Werror main.c libftprintf.a
 ```
 
 ---
