@@ -35,7 +35,7 @@ git clone https://github.com/whtifigo/42_printf.git
 ```
 Change your current path to the ```42_printf``` folder:
 ```
-cd 42-printf
+cd 42_printf
 ```
 And compile everything:
 ```
