@@ -1,3 +1,4 @@
+![ft_printf](https://github.com/user-attachments/assets/957ffa95-9d8e-4262-a755-7ab33b738d64)
 # 📚 ft_Printf – 42 Project
 
 ## 🗂️ Table of Contents
